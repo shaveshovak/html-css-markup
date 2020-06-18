@@ -1,0 +1,19 @@
+@import './mixin.scss';
+@import './variables.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: $Roboto;
+}
+
+.container{
+    @include customClasses;
+    h6{
+        font-size: 36px;
+    }
+}
+
+.apps{
+    
+}
