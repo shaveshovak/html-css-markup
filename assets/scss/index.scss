@@ -4,6 +4,8 @@
 *{
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
     font-family: $Roboto;
 }
 
@@ -11,9 +13,150 @@
     @include customClasses;
     h6{
         font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 30px;
     }
 }
 
+.offset-top-40{
+    padding-top: 40px;
+}
+
+.offset-bottom-40{
+    padding-bottom: 40px;
+}
+
 .apps{
-    
+    text-align: center;
+    &__descr{
+        color: $grey;
+        padding: 0 20%;
+        line-height: 1.7;
+        font-size: 90%;
+        @media only screen and (max-width: $md){
+            padding: 0 0;
+        }
+    }
+    &__btns{
+        @include flexCenter;
+        margin-top: 30px;
+        a{
+            @include flexCenter;
+            background: $blue;
+            width: 200px;
+            height: 60px;
+            margin-left: 10px;
+            transition: all 0.3s;
+            &:hover{
+                background: $red;
+            }
+            @media only screen and (max-width: $sm){
+                margin-bottom: 10px;
+            }
+        }
+        @media only screen and (max-width: $sm){
+            flex-wrap: wrap;
+        }
+    }
+}
+
+footer{
+    background: $blue;
+    .container{
+        @include flexBetween;
+        .item{
+            width: 300px;
+            h4{
+                color: $white;
+                font-weight: normal;
+                font-size: 16px;
+                &::after{
+                    content: '';
+                    display: block;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+                    margin: 15px 0;
+                    width: 100%;
+                }
+            }
+            .links{
+                @include flexBetween;
+                flex-wrap: wrap;
+                &__item{
+                    width: 50%;
+                    margin-bottom: 15px;
+                    a{
+                        color: $white;
+                        font-size: 90%;
+                    }
+                    &::before{
+                        display: inline-block;
+                        font-family: "Font Awesome 5 Free"; 
+                        font-weight: 900;
+                        content: '\f0da';
+                        color: $white;
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .place{
+                @include flexBetween;
+                flex-wrap: wrap;
+                &__item{
+                    width: 50%;
+                    margin-bottom: 15px;
+                    a{
+                        color: $white;
+                        font-size: 90%;
+                    }
+                    &::before{
+                        display: inline-block;
+                        font-family: "Font Awesome 5 Free"; 
+                        font-weight: 900;
+                        content: '\f3c5';
+                        color: $white;
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .recent-posts{
+                &__post{
+                    @include flexBetween;
+                    align-items: center;
+                    text-align: center;
+                    color: $white;
+                    margin-bottom: 15px;
+                }
+                &__date{
+                    width: 100px;
+                    border-right: 1px solid rgba(255, 255, 255, 0.12);
+                    .number{
+                        font-size: 30px;
+                        display: block;
+                    }
+                    .month{
+                        font-size: 90%;
+                    }
+                }
+                &__descr{
+                    font-size: 90%;
+                }
+            }
+            @media only screen and (max-width: $md){
+                margin-bottom: 15px;
+                width: 96%;
+            }
+        }
+        @media only screen and (max-width: $md){
+            flex-wrap: wrap;
+            padding-left: 20px;
+        }
+    }
+    .privacy{
+        background: $dark-blue;
+        text-align: center;
+        padding: 15px 0;
+        p{
+            color: rgba($white, 0.4);
+        }
+    }
 }

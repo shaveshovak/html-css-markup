@@ -3,23 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/index.css">
+    <script src="https://kit.fontawesome.com/235fb8762e.js" crossorigin="anonymous"></script>
     <title>Markup - template</title>
 </head>
 <body>
     
     <section class="apps">
-        <div class="container">
+        <div class="container offset-top-40 offset-bottom-40">
             <h6>Get JobsFactory App for Your Mobile</h6>
-            <p>
+            <p class="apps__descr">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium aperiam quibusdam cum animi labore temporibus dolor, ad quia expedita quos vitae hic consectetur corporis distinctio maiores esse blanditiis! Libero, consectetur.
             </p>
             <div class="apps__btns">
-                <a href="#"></a>
+                <a href="#" target="_blank">
+                    <img src="assets/img/playstore.png" alt="">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="assets/img/appstore.svg" alt="">
+                </a>
             </div>
         </div>
     </section>
+
+    <footer>
+        <div class="container offset-top-40 offset-bottom-40">
+            <div class="item">
+                <h4>Quick Links</h4>
+                <ul class="links">
+                    <li class="links__item"><a href="#">Menu Item 1</a></li>
+                    <li class="links__item"><a href="#">Menu Item 2</a></li>
+                    <li class="links__item"><a href="#">Menu Item 3</a></li>
+                    <li class="links__item"><a href="#">Menu Item 4</a></li>
+                    <li class="links__item"><a href="#">Menu Item 5</a></li>
+                    <li class="links__item"><a href="#">Menu Item 6</a></li>
+                    <li class="links__item"><a href="#">Menu Item 7</a></li>
+                    <li class="links__item"><a href="#">Menu Item 8</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <h4>Recent News posts</h4>
+                <div class="recent-posts">
+                    <a href="#" class="recent-posts__post">
+                        <p class="recent-posts__date">
+                            <span class="number">25</span>
+                            <span class="month">april</span>
+                        </p>
+                        <p class="recent-posts__descr">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit
+                        </p>
+                    </a>
+                    <a href="#" class="recent-posts__post">
+                        <p class="recent-posts__date">
+                            <span class="number">26</span>
+                            <span class="month">april</span>
+                        </p>
+                        <p class="recent-posts__descr">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <h4>Jobs in Popular cities</h4>
+                <ul class="place">
+                    <li class="place__item"><a href="#">Chicago</a></li>
+                    <li class="place__item"><a href="#">San Francisco</a></li>
+                    <li class="place__item"><a href="#">Chicago</a></li>
+                    <li class="place__item"><a href="#">San Francisco</a></li>
+                    <li class="place__item"><a href="#">Chicago</a></li>
+                    <li class="place__item"><a href="#">San Francisco</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="privacy">
+            <p>© 2020 Privacy Policy</p>
+        </div>
+    </footer>
 
     <script src="assets/js/index.js"></script>
 </body>

@@ -7,3 +7,7 @@
     max-width: 1200px;
     margin: auto;
 }
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+}
