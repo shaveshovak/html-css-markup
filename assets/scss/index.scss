@@ -26,6 +26,94 @@
 .offset-bottom-40{
     padding-bottom: 70px;
 }
+
+.steps{
+    padding: 70px 0;
+    .steps-list{
+        @include flexBetween;
+        justify-content: space-around;
+        &__item{
+            text-align: center;
+            position: relative;
+            &::after{
+                content: '';
+                display: inline-block;
+                background-repeat: no-repeat;
+                width: 80%;
+                height: 50px;
+                position: absolute;
+            }
+            &:nth-child(1), &:nth-child(3){
+                &::after{
+                    background-image: url('../img/divider-line-top.png');
+                    background-position: center;
+                    top: 30px;
+                    left: 160px;
+                }
+            }
+            &:nth-child(2){
+                &::after{
+                    background-image: url('../img/divider-line-bottom.png');
+                    background-position: center;
+                    bottom: 90px;
+                    left: 160px;
+                }
+            }
+            @media only screen and (max-width: $lg){
+                width: 300px;
+                margin-bottom: 30px;
+                &::after{
+                    display: none;
+                }
+            }
+        }
+        &__title{
+            font-weight: normal;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        &__descr{
+            color: $grey;
+            font-size: 90%;
+        }
+        &__icon{
+            width: 150px;
+            height: 150px;
+            box-shadow: 0px 3px 10px rgba(0,0,0, 0.2);
+            border-radius: 100%;
+            margin-bottom: 20px;
+            @include flexCenter;
+            .fas{
+                font-size: 40px;
+                color: $blue;
+                border: 1px solid $blue;
+                border-radius: 100%;
+                padding: 45px;
+            }
+            @media only screen and (max-width: $lg){
+                margin: 20px auto;
+            }
+        }
+        &__btn{
+            text-transform: uppercase;
+            color: $blue;
+            border: 2px solid $blue;
+            padding: 15px 40px;
+            background: transparent;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.6s;
+            &:hover{
+                background: $blue;
+                color: $white;
+            }
+        }
+        @media only screen and (max-width: $lg){
+            flex-wrap: wrap;
+        }
+    }
+}
+
 .latest-posts{
     background: $light-grey;
     padding: 70px 0;
