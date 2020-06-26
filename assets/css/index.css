@@ -20,6 +20,95 @@
 .offset-bottom-40 {
   padding-bottom: 70px; }
 
+header {
+  background-image: url("../img/header-bg.svg");
+  background-position: right;
+  height: 100vh; }
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 15px 0; }
+    header nav .logo {
+      width: 25%; }
+      header nav .logo img {
+        width: 60%; }
+    header nav .menu-list {
+      width: 75%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      text-transform: uppercase;
+      font-size: 14px; }
+      header nav .menu-list__item {
+        padding: 15px 30px; }
+        header nav .menu-list__item a {
+          color: #000000; }
+      header nav .menu-list__sign-up {
+        padding: 15px 30px; }
+        header nav .menu-list__sign-up a::before {
+          display: inline-block;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: '\f007';
+          margin-right: 5px; }
+      header nav .menu-list__login {
+        background-color: rgba(16, 135, 235, 0.3);
+        padding: 15px 40px;
+        cursor: pointer;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s; }
+        header nav .menu-list__login a {
+          color: #ffffff; }
+          header nav .menu-list__login a::before {
+            display: inline-block;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-right: 5px;
+            content: '\f2f6'; }
+        header nav .menu-list__login:hover {
+          background-color: #dc3545; }
+  header .sub-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: calc(100vh - 150px);
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    header .sub-header__descr, header .sub-header__image {
+      width: 50%; }
+    header .sub-header__descr h6 {
+      text-align: left;
+      font-size: 50px; }
+    header .sub-header__descr p {
+      color: #000000;
+      font-size: 16px; }
+      header .sub-header__descr p a {
+        color: #1087eb;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s; }
+        header .sub-header__descr p a:hover {
+          color: #dc3545; }
+    header .sub-header__image {
+      text-align: center; }
+      header .sub-header__image img {
+        width: 70%; }
+
 .steps {
   padding: 70px 0; }
   .steps .steps-list {
@@ -33,7 +122,8 @@
     justify-content: space-around; }
     .steps .steps-list__item {
       text-align: center;
-      position: relative; }
+      position: relative;
+      cursor: pointer; }
       .steps .steps-list__item::after {
         content: '';
         display: inline-block;
@@ -44,7 +134,7 @@
       .steps .steps-list__item:nth-child(1)::after, .steps .steps-list__item:nth-child(3)::after {
         background-image: url("../img/divider-line-top.png");
         background-position: center;
-        top: 30px;
+        top: 20px;
         left: 160px; }
       .steps .steps-list__item:nth-child(2)::after {
         background-image: url("../img/divider-line-bottom.png");
@@ -83,7 +173,7 @@
       .steps .steps-list__icon .fas {
         font-size: 40px;
         color: #1087eb;
-        border: 1px solid #1087eb;
+        border: 1px solid rgba(16, 135, 235, 0.3);
         border-radius: 100%;
         padding: 45px; }
       @media only screen and (max-width: 992px) {

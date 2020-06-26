@@ -27,6 +27,100 @@
     padding-bottom: 70px;
 }
 
+header{
+    background-image: url('../img/header-bg.svg');
+    background-position: right;
+    height: 100vh;
+    nav{
+        @include flexBetween;
+        align-items: center;
+        padding: 15px 0;
+        .logo{
+            width: 25%;
+            img{
+                width: 60%;
+            }
+        }
+        .menu-list{
+            width: 75%;
+            @include flexBetween;
+            text-transform: uppercase;
+            font-size: 14px;
+            &__item{
+                padding: 15px 30px;
+                a{
+                    color: $black;
+                }
+            }
+            &__sign-up{
+                padding: 15px 30px;
+                a{
+                    // color: $white;
+                    &::before{
+                        display: inline-block;
+                        font-family: "Font Awesome 5 Free"; 
+                        font-weight: 900;
+                        content: '\f007';
+                        margin-right: 5px;
+                    }
+                }
+
+            }
+            &__login{
+                background-color: rgba($blue, 0.3);
+                padding: 15px 40px;
+                cursor: pointer;
+                transition: all 0.5s;
+                a{
+                    color: $white;
+                    &::before{
+                        display: inline-block;
+                        font-family: "Font Awesome 5 Free"; 
+                        font-weight: 900;
+                        margin-right: 5px;
+                        content: '\f2f6';
+                    }
+                }
+                &:hover{
+                    background-color: $red;
+                }
+            }
+        }
+    }
+    .sub-header{
+        @include flexBetween;
+        height: calc(100vh - 150px);
+        align-items: center;
+        &__descr,
+        &__image{
+            width: 50%;
+        }
+        &__descr{
+            h6{
+                text-align: left;
+                font-size: 50px;
+            }
+            p{
+                color: $black;
+                font-size: 16px;
+                a{
+                    color: $blue;
+                    transition: all 0.5s;
+                    &:hover{
+                        color: $red;
+                    }
+                }
+            }
+        }
+        &__image{
+            text-align: center;
+            img{
+                width: 70%;
+            }
+        }
+    }
+}
+
 .steps{
     padding: 70px 0;
     .steps-list{
@@ -35,6 +129,7 @@
         &__item{
             text-align: center;
             position: relative;
+            cursor: pointer;
             &::after{
                 content: '';
                 display: inline-block;
@@ -47,7 +142,7 @@
                 &::after{
                     background-image: url('../img/divider-line-top.png');
                     background-position: center;
-                    top: 30px;
+                    top: 20px;
                     left: 160px;
                 }
             }
@@ -86,7 +181,7 @@
             .fas{
                 font-size: 40px;
                 color: $blue;
-                border: 1px solid $blue;
+                border: 1px solid rgba($blue, 0.3);
                 border-radius: 100%;
                 padding: 45px;
             }
