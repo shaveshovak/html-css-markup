@@ -26,13 +26,14 @@ h6 {
 
 header {
   background-image: url("../img/header-bg.svg");
-  background-position: right;
+  background-position: 100px;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh; }
   @media only screen and (max-width: 992px) {
     header {
-      height: auto; } }
+      height: auto;
+      background-image: none; } }
   header nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -74,7 +75,7 @@ header {
             content: '\f007';
             margin-right: 5px; }
       header nav .menu-list__login {
-        background-color: rgba(16, 135, 235, 0.3);
+        background-color: #dc3545;
         padding: 15px 25px;
         cursor: pointer;
         -webkit-transition: all 0.5s;
@@ -468,6 +469,9 @@ footer {
         flex-wrap: wrap;
         padding-left: 20px;
         padding-right: 20px; } }
+    @media only screen and (max-width: 992px) {
+      footer .container {
+        padding: 20px; } }
   footer .privacy {
     background: #0076d1;
     text-align: center;

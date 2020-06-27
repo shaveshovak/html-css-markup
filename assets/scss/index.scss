@@ -33,12 +33,13 @@ h6{
 }
 header{
     background-image: url('../img/header-bg.svg');
-    background-position: right;
+    background-position: 100px;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     @media only screen and (max-width: $lg){
         height: auto;
+        background-image: none;
     }
     nav{
         @include flexBetween;
@@ -77,7 +78,7 @@ header{
 
             }
             &__login{
-                background-color: rgba($blue, 0.3);
+                background-color: $red;
                 padding: 15px 25px;
                 cursor: pointer;
                 transition: all 0.5s;
@@ -446,6 +447,9 @@ footer{
             flex-wrap: wrap;
             padding-left: 20px;
             padding-right: 20px;
+        }
+        @media only screen and (max-width: $lg){
+            padding: 20px;
         }
     }
     .privacy{
