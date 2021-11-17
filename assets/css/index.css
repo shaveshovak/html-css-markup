@@ -498,7 +498,7 @@ footer {
     width: 130px; }
   @media only screen and (max-width: 1024px) {
     #mobile-nav {
-      display: block; } }
+      display: flex; } }
 
 #menuToggle {
   display: block;
